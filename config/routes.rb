@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
-  get 'registrations/update'
+
+  get 'passwords/new'
+
+  get 'passwords/create'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'confirmations/new'
+
+  get 'confirmations/create'
 
   get 'home/index'
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations", :confirmations => "confirmations", :sessions => "sessions", :passwords => "passwords"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
