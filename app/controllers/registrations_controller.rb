@@ -27,4 +27,9 @@ class RegistrationsController < ApplicationController
   		render 'edit'
   	end
   end
+  def new
+  end
+  def create
+  end
+
 end
